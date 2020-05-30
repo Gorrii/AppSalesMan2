@@ -1,0 +1,55 @@
+﻿<Window x:Class="AppSalesMan2.Windows.FindCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+        Title="OppWindow" MaxHeight="840" MaxWidth="1400" MinHeight="840" MinWidth="1400" WindowStartupLocation="CenterScreen"  d:DesignHeight="840">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="\Assety\RestWall.jpg" Stretch="Fill" StretchDirection="Both"/>
+        <Button x:Name="btnBack" Content="Back" FontSize="22" Click="BtnBack_Click" Margin="42,10,0,51"  Width="88" HorizontalAlignment="Left" BorderBrush="#FF75D5E1" OpacityMask="White" Background="#FFE8EEF1" Foreground="#FF01A4B3"/>
+        <TextBlock  Text="Comapany Name" HorizontalAlignment="Left" Height="34" Margin="42,156,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Right" Height="34" Margin="0,156,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1"/>
+        <TextBlock  Text="Search by" HorizontalAlignment="Left" Height="42" Margin="42,77,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="398" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBlock  Text="SAP" HorizontalAlignment="Left" Height="34" Margin="42,214,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtSAP" HorizontalAlignment="Right" Height="34" Margin="0,214,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1"/>
+        <TextBlock  Text="IFA" HorizontalAlignment="Left" Height="34" Margin="42,274,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtIFA" HorizontalAlignment="Right" Height="34" Margin="0,274,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1" />
+        <TextBlock  Text="City" HorizontalAlignment="Left" Height="34" Margin="42,334,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtCity" HorizontalAlignment="Right" Height="34" Margin="0,334,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1" />
+        <TextBlock  Text="PostCode" HorizontalAlignment="Left" Height="34" Margin="42,393,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtPostCode" HorizontalAlignment="Right" Height="34" Margin="0,393,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1" />
+        <TextBlock  Text="Industry" HorizontalAlignment="Left" Height="34" Margin="42,452,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtIndustry" HorizontalAlignment="Right" Height="34" Margin="0,452,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1" />
+        <TextBlock  Text="Logistic" HorizontalAlignment="Left" Height="34" Margin="42,512,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Style="{StaticResource Label}" Grid.Row="1" FontSize="18" Padding="3" TextAlignment="Center"/>
+        <TextBox x:Name="txtLogistic" HorizontalAlignment="Right" Height="34" Margin="0,512,960,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Style="{StaticResource txtBox}" FontSize="14" Grid.Row="1" />
+        <DataGrid x:Name="DGFindResult"  HorizontalAlignment="Left" Height="537" Grid.Row="1" VerticalAlignment="Top" Width="876" Margin="478,77,0,0" 
+            Background="White" BorderBrush="#FF01A4B3" FontSize="20" BorderThickness="3" Foreground="Black"
+            SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+            FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding CustomerList}"  >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Company" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Postcode" Binding="{Binding Postcode}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Industry" Binding="{Binding Industry}"  Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Logistic" Binding="{Binding Logistic}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="SAP" Binding="{Binding SAP}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="IFA" Binding="{Binding IFA}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnSearch"  Content="Search" HorizontalAlignment="Left" Height="42" Margin="266,572,0,0"  VerticalAlignment="Top" Width="174" Style="{StaticResource btn}" Grid.Row="1" FontSize="18" Padding="3" Click="btnSearch_Click" />
+        <Button x:Name="btnReset"  Content="Reset" HorizontalAlignment="Left" Height="42" Margin="42,572,0,0"  VerticalAlignment="Top" Width="178" Style="{StaticResource btn}" Grid.Row="1" FontSize="18" Padding="3" Click="btnReset_Click" />
+
+
+    </Grid>
+</Window>

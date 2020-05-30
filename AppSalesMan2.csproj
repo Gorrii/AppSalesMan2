@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppSalesMan2.Database\**" />
+    <EmbeddedResource Remove="AppSalesMan2.Database\**" />
+    <None Remove="AppSalesMan2.Database\**" />
+    <Page Remove="AppSalesMan2.Database\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assety\favicon.png" />
+    <None Remove="siemens_logo.jpg" />
+    <None Remove="Windows\Menu.jpg" />
+    <None Remove="Windows\MenuWall.jpg" />
+    <None Remove="Windows\RestWall.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="AppSalesMan2.Database\AppSalesMan2.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assety\favicon.png" />
+    <Resource Include="Assety\siemens_logo.jpg" />
+    <Resource Include="Assety\Menu.jpg" />
+    <Resource Include="Assety\RestWall.jpg" />
+    <Content Include="Assety\MenuWall.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

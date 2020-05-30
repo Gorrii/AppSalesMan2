@@ -1,0 +1,105 @@
+﻿<Window x:Class="AppSalesMan2.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+           Title="MenuWindow" MaxHeight="840" MaxWidth="1400" MinHeight="840" MinWidth="1400" WindowStartupLocation="CenterScreen" >
+    <Grid Background="#FFFCFCFC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="191"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image  Source="\Assety\Menu.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.019"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="Wellcome" FontSize="30" FontFamily="Arial Black" Foreground="#FF01A4B3" Margin="60,0,1142,0" Height="36" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.096"/>
+                    <TranslateTransform X="0.057" Y="-0.183"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="txtBlockName" Text="Name****" FontSize="30" FontFamily="Arial Black" Foreground="#FF01A4B3" Margin="60,134,1016,0" Height="36" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.096"/>
+                    <TranslateTransform X="-0.058"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="btnProfil" Content="Profil" HorizontalAlignment="Left" Height="42" Margin="1114,139,30,0" VerticalAlignment="Top" Width="276" Background="#FF01A4B3" Foreground="White" FontSize="23" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="BtnProfil_Click"/>
+        <GroupBox Header="Volumen Report" HorizontalAlignment="Left" Height="342" Margin="96,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel Height="307">
+                <Button Content="Direct" Height="40" Width="250" Background="#FF01A4B3" Foreground="White" FontSize="24" FontWeight="Normal" FontStyle="Normal" Click="btmDirect_Click" Margin="0,20,0,0"/>
+                <Button x:Name="btnIndirect" Content="InDirect" Height="40" Width="250" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="Indirect_Click" Margin="0,20,0,0"/>
+                <Button x:Name="btnOpp" Content="Opp" Height="40" Width="250" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="0" FontWeight="Normal" FontStyle="Normal" Click="btnOpp_Click" Margin="0,20,0,0"/>
+                <Button Content="Bonus Progress" Height="40" Width="250" Background="#FF01A4B3" Foreground="White" FontSize="24" FontWeight="Normal" FontStyle="Normal" Click="btnBonusProgres_Click" Margin="0,20,0,0" Padding="0"/>
+                <Button Content="Gap" Height="40" Width="250" Background="#FF01A4B3" Foreground="White" FontSize="24" FontWeight="Normal" FontStyle="Normal" Margin="0,20,0,0"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Customer information" HorizontalAlignment="Left" Height="164" Margin="402,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button x:Name="CustomerList" Content="My Customer List" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="CustomerList_Click" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button x:Name="BtnRegionAssigned" Content="Find Customer" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0" Click="BtnRegionAssigned_Click"/>
+
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="MM information" HorizontalAlignment="Left" Height="164" Margin="402,271,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button  Content="HighLights/LowLights" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button  Content="TOP customer situation" Background="#FF01A4B3" Foreground="White" FontSize="22" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0"/>
+
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="Overdue" HorizontalAlignment="Left" Height="164" Margin="704,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button x:Name="CustomerList1" Content="Overdue Company List" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="CustomerList_Click" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button x:Name="BtnRegionAssigned1" Content="Overdue Alerts" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0" Click="BtnRegionAssigned_Click"/>
+
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="Marketing budget" HorizontalAlignment="Left" Height="164" Margin="704,271,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button x:Name="CustomerList2" Content="Marketing action" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="CustomerList_Click" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button x:Name="BtnRegionAssigned2" Content="Alerts" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0" Click="BtnRegionAssigned_Click"/>
+
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="Status ofert" HorizontalAlignment="Left" Height="164" Margin="1010,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button x:Name="CustomerList3" Content="Overdue Company List" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="CustomerList_Click" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button x:Name="BtnRegionAssigned3" Content="Overdue Alerts" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0" Click="BtnRegionAssigned_Click"/>
+
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Header="Quick-Action" HorizontalAlignment="Left" Height="164" Margin="1010,271,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" FontSize="22" BorderBrush="#FF01A4B3" Foreground="#FF01A4B3" Background="#FFECF1F5">
+            <StackPanel>
+                <Button x:Name="CustomerList4" Content="Fead-back" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Click="CustomerList_Click" Height="40" Width="250" Margin="0,20,0,0"/>
+                <Button x:Name="BtnRegionAssigned4" Content="Status" Background="#FF01A4B3" Foreground="White" FontSize="24" Padding="1" FontWeight="Normal" FontStyle="Normal" Height="40" Width="250" Margin="0,20,0,0" Click="BtnRegionAssigned_Click"/>
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+    </Grid>
+</Window>

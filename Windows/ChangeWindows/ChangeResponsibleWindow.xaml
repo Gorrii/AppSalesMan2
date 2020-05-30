@@ -1,0 +1,18 @@
+﻿<Window x:Class="AppSalesMan2.Windows.ChangeWindows.ChangeResponsibleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows.ChangeWindows"
+        mc:Ignorable="d"
+        Title="ChangeResponsibleWindow" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+
+        <TextBlock Style="{StaticResource Label}" HorizontalAlignment="Center" Height="54" Margin="0,10,0,0" Text="Who is responsible for this customer. Please enter the salesman lastname below" TextWrapping="Wrap" VerticalAlignment="Top" Width="352"/>
+        <TextBox x:Name="txtLastName" Style="{StaticResource txtBox}" HorizontalAlignment="Center" Height="38" Margin="0,70,0,0" Text="Salesman lastname" TextWrapping="Wrap" VerticalAlignment="Top" Width="352"/>
+        <Button Style="{StaticResource btn}" Content="Send" HorizontalAlignment="Right" Height="36" Margin="0,0,15,10" VerticalAlignment="Bottom" Width="170" Click="BtnSend_Click"  />
+        <Button Style="{StaticResource btn}" Content="Cancel" HorizontalAlignment="Left" Height="36" Margin="15,0,0,10" VerticalAlignment="Bottom" Width="170" Click="BtnCancel_Click"/>
+
+    </Grid>
+</Window>
+

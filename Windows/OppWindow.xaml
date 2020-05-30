@@ -1,0 +1,36 @@
+﻿<Window x:Class="AppSalesMan2.Windows.OppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+        Title="OppWindow" MaxHeight="840" MaxWidth="1400" MinHeight="840" MinWidth="1400" WindowStartupLocation="CenterScreen"  d:DesignHeight="840">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="\Assety\RestWall.jpg" Stretch="Fill" StretchDirection="Both"/>
+        <Button x:Name="btnBack" Content="Back" FontSize="22" Click="BtnBack_Click" Margin="42,10,0,51"  Width="88" HorizontalAlignment="Left" BorderBrush="#FF75D5E1" OpacityMask="White" Background="#FFE8EEF1" Foreground="#FF01A4B3"/>
+        <DataGrid x:Name="DGWonOpp"  HorizontalAlignment="Center" Height="600" Grid.Row="1" VerticalAlignment="Top" Width="1300" Margin="0,40,0,40" 
+                  Background="White" BorderBrush="#FF01A4B3" FontSize="20" BorderThickness="3" Foreground="Black"
+                   SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+                  FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding WonOppList}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="OppName" Binding="{Binding Path=WonOppName}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="EndCustomer" Binding="{Binding Path=WonOppEndCustomer}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Estimated OI Date" Binding="{Binding Path=EstimatedOIDate}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Estimated OI Volumne" Binding="{Binding Path=WonOppVolumen}"  Width="*" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Header="Akccepted" Binding="{Binding Path=Accepted}" Width="*" IsReadOnly="True"/>
+                
+
+            </DataGrid.Columns>
+        </DataGrid>
+        
+
+    </Grid>
+</Window>

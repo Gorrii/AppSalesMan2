@@ -1,0 +1,124 @@
+﻿<Window x:Class="AppSalesMan2.Windows.ProfilWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+         Title="SalesManMainWindow" MaxHeight="840" MaxWidth="1400" MinHeight="840" MinWidth="1400" WindowStartupLocation="CenterScreen" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="\Assety\RestWall.jpg" Stretch="Fill" StretchDirection="Both"/>
+        <Button x:Name="btnBack" Content="Back" FontSize="22" Click="BtnBack_Click" Margin="42,10,0,51"  Width="88" HorizontalAlignment="Left" BorderBrush="#FF75D5E1" OpacityMask="White" Background="#FFE8EEF1" Foreground="#FF01A4B3"/>
+        <GroupBox  Header="Your Profile" BorderThickness="3" HorizontalAlignment="Left" Height="660" Margin="80,0,0,32" VerticalAlignment="Bottom" Width="650" Grid.Row="1" Background="White" BorderBrush="#FF01A4B3" FontSize="30" Foreground="#FF01A4B3">
+
+            <StackPanel   Width="476" Height="571" Margin="81,0,81,0">
+                <StackPanel.Resources>
+                    <Style TargetType="Label" x:Key="Label">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Padding" Value="10"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background" Value="#FF01A4B3"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Width" Value="200"/>
+                    </Style>
+                    <Style TargetType="TextBox" x:Key="txtBox">
+                        <Setter Property="BorderThickness" Value="3"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Width" Value="200"/>
+                        <Setter Property="BorderBrush" Value="#FF01A4B3"/>
+                        <Setter Property="SelectionBrush" Value="#FF01A4B3"/>
+                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Margin" Value="50,0,0,0"/>
+                        <Setter Property="IsEnabled" Value="true"/>
+                    </Style>
+
+                </StackPanel.Resources>
+
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="First Name :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtFirstName"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Last Name :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtLastName"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Phonenumber :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtPhonenumber"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Email :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtEmail"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Department :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtDepartment"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Menager :" Style="{StaticResource Label}"/>
+                    <TextBox Style="{StaticResource txtBox}" x:Name="txtMenager"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,50,0,0"  >
+                    <Button x:Name="btnSave" Content="Save" Width="200" Height="50" Background="#FF01A4B3" Foreground="White" Padding="5" Click="BtnSaveProfile_Click" />
+
+
+                </WrapPanel>
+
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="Change your password" BorderThickness="3" Margin="0,10,80,304" Grid.Row="1" Width="560" Background="White" BorderBrush="#FF01A4B3" FontSize="30" Foreground="#FF01A4B3" HorizontalAlignment="Right">
+
+            <StackPanel   Width="476" Height="326" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Label}" x:Key="Label">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Padding" Value="10"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background" Value="#FF01A4B3"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Width" Value="200"/>
+                    </Style>
+                    <Style TargetType="{x:Type PasswordBox}" x:Key="txtBox">
+                        <Setter Property="BorderThickness" Value="3"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Width" Value="200"/>
+                        <Setter Property="BorderBrush" Value="#FF01A4B3"/>
+                        <Setter Property="SelectionBrush" Value="#FF01A4B3"/>
+                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Margin" Value="50,0,0,0"/>
+                        <Setter Property="IsEnabled" Value="true"/>
+                    </Style>
+
+                </StackPanel.Resources>
+
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Old password :" Style="{StaticResource Label}"/>
+                    <PasswordBox Style="{StaticResource txtBox}" x:Name="txtOldPassword"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="New Password :" Style="{StaticResource Label}"/>
+                    <PasswordBox Style="{StaticResource txtBox}" x:Name="txtNewPassword"/>
+                </WrapPanel>
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0"  >
+                    <Label Content="Re-Password :" Style="{StaticResource Label}"/>
+                    <PasswordBox Style="{StaticResource txtBox}" x:Name="txtReNewPassword"/>
+                </WrapPanel>
+
+                <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,50,0,0"  >
+                    <Button x:Name="btnChangePassword" Content="Save" Width="200" Height="50" Background="#FF01A4B3" Foreground="White" Padding="5" Click="BtnChangePassword_Click"/>
+
+
+                </WrapPanel>
+
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</Window>

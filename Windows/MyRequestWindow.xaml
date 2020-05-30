@@ -1,0 +1,25 @@
+﻿<Window x:Class="AppSalesMan2.Windows.MyRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+        Title="MyRequestWindow" Height="800" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="DGRequest"  HorizontalAlignment="Center" Height="760" VerticalAlignment="Top" Width="680" 
+                  Background="White" BorderBrush="#FF01A4B3" FontSize="20" BorderThickness="3" Foreground="Black"
+                   SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+                  FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding RequestList}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Company Id" Binding="{Binding Path=CompanyID}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Current Parametr" Binding="{Binding Path=Parameter}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="New Parametr" Binding="{Binding Path=NewParameter}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

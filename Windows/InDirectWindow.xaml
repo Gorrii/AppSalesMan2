@@ -1,0 +1,79 @@
+﻿<Window x:Class="AppSalesMan2.Windows.InDirectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows"
+        mc:Ignorable="d"
+        Title="CompanyList" MaxHeight="840" MaxWidth="1400" MinHeight="840" MinWidth="1400" WindowStartupLocation="CenterScreen"  d:DesignHeight="840">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="\Assety\RestWall.jpg" Stretch="Fill" StretchDirection="Both"/>
+        <Button x:Name="btnBack" Content="Back" FontSize="22" Click="BtnBack_Click" Margin="42,10,0,51"  Width="88" HorizontalAlignment="Left" BorderBrush="#FF75D5E1" OpacityMask="White" Background="#FFE8EEF1" Foreground="#FF01A4B3"/>
+        <DataGrid x:Name="DGIndirectQ1"  HorizontalAlignment="Left" Height="495" Grid.Row="1" VerticalAlignment="Top" Width="284" Margin="42,100,0,0" 
+                  Background="White" BorderBrush="#FF01A4B3" FontSize="18" BorderThickness="3" Foreground="Black"
+                   SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+                  FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding IndirectQ1}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Customer" Binding="{Binding Path=DystrCustomer}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Volumen" Binding="{Binding Path=Volumen}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="42,56,0,0" Grid.Row="1" Text="Quarter 1" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource Label}" TextAlignment="Center"/>
+        <DataGrid x:Name="DGIndirectQ2"  HorizontalAlignment="Left" Height="495" Grid.Row="1" VerticalAlignment="Top" Width="284" Margin="387,100,0,0" 
+            Background="White" BorderBrush="#FF01A4B3" FontSize="18" BorderThickness="3" Foreground="Black"
+            SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+            FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding IndirectQ2}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Customer" Binding="{Binding DystrCustomer}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Volumen" Binding="{Binding Volumen}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="387,56,0,0" Grid.Row="1" Text="Quarter 2" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource ResourceKey=Label}" TextAlignment="Center"/>
+        <DataGrid x:Name="DGIndirectQ3"  HorizontalAlignment="Left" Height="495" Grid.Row="1" VerticalAlignment="Top" Width="284" Margin="734,100,0,0" 
+            Background="White" BorderBrush="#FF01A4B3" FontSize="18" BorderThickness="3" Foreground="Black"
+            SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+            FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding IndirectQ3}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Customer" Binding="{Binding DystrCustomer}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Volumen" Binding="{Binding Volumen}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="734,56,0,0" Grid.Row="1" Text="Quarter 3" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource ResourceKey=Label}" TextAlignment="Center"/>
+        <DataGrid x:Name="DGIndirectQ4"  HorizontalAlignment="Left" Height="495" Grid.Row="1" VerticalAlignment="Top" Width="284" Margin="1067,100,0,0" 
+            Background="White" BorderBrush="#FF01A4B3" FontSize="18" BorderThickness="3" Foreground="Black"
+            SelectionMode="Single"  AlternatingRowBackground="#FFD2F1F3" AlternationCount="2"
+            FrozenColumnCount="1" AutoGenerateColumns="False" CanUserAddRows="False"  ItemsSource="{Binding IndirectQ4}" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Customer" Binding="{Binding DystrCustomer}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Volumen" Binding="{Binding Volumen}" Width="*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="1067,56,0,0" Grid.Row="1" Text="Quarter 4" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource ResourceKey=Label}" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="42,600,0,0" Grid.Row="1" Text="SUM:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Style="{StaticResource Label}" TextAlignment="Right"/>
+        <TextBlock x:Name="txtSumQ1" HorizontalAlignment="Left" Height="39" Margin="189,600,0,0" Grid.Row="1"  FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Style="{StaticResource Label}" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="386,600,0,0" Grid.Row="1" Text="SUM:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Style="{StaticResource Label}" TextAlignment="Right"/>
+        <TextBlock x:Name="txtSumQ2" HorizontalAlignment="Left" Height="39" Margin="533,600,0,0" Grid.Row="1"  FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Style="{StaticResource Label}" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="734,600,0,0" Grid.Row="1" Text="SUM:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Style="{StaticResource Label}" TextAlignment="Right"/>
+        <TextBlock x:Name="txtSumQ3" HorizontalAlignment="Left" Height="39" Margin="881,600,0,0" Grid.Row="1"  FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Style="{StaticResource Label}" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Height="39" Margin="1067,600,0,0" Grid.Row="1" Text="SUM:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Style="{StaticResource Label}" TextAlignment="Right"/>
+        <TextBlock x:Name="txtSumQ4" HorizontalAlignment="Left" Height="39" Margin="1214,600,0,0" Grid.Row="1"  FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Style="{StaticResource Label}" TextAlignment="Center"/>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="AppSalesMan2.Windows.ChangeWindows.ChangeCityAndPostcodeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows.ChangeWindows"
+        mc:Ignorable="d"
+        Title="ChangeNameWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Height="184">
+        <TextBlock x:Name="txtExistingCity" HorizontalAlignment="Left" Height="34" Margin="20,30,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Style="{StaticResource Label}"/>
+        <TextBlock x:Name="txtExistingPostcode" HorizontalAlignment="Left" Height="34" Margin="20,70,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Style="{StaticResource Label}"/>
+        <TextBox x:Name="txtNewCity" HorizontalAlignment="Right" Height="35" Margin="0,30,20,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Style="{StaticResource txtBox}" FontSize="14"/>
+        <TextBox x:Name="txtNewPostcode" HorizontalAlignment="Right" Margin="0,70,20,0"  TextWrapping="Wrap" Width="157" Style="{StaticResource txtBox}" FontSize="14" Height="35" VerticalAlignment="Top"/>
+        <Label  Content="Current City and Postcode" HorizontalAlignment="Left" Height="27" Margin="20,0,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label  Content="New City and postcode" Height="27" Margin="0,0,50,0" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Button x:Name="btnCancel" Style="{StaticResource btn}" Content="Cancel" HorizontalAlignment="Left" Height="42" Margin="20,110,0,0" VerticalAlignment="Top" Width="150" Click="BtnCancel_Click"/>
+        <Button Style="{StaticResource btn}" Content="Send Request" HorizontalAlignment="Right" Height="42" Margin="0,110,20,0" VerticalAlignment="Top" Width="157" Click="ButtonSend_Click"/>
+
+    </Grid>
+</Window>

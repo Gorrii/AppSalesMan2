@@ -1,0 +1,18 @@
+﻿<Window x:Class="AppSalesMan2.Windows.ChangeWindows.ChangeIndustryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppSalesMan2.Windows.ChangeWindows"
+        mc:Ignorable="d"
+         Title="ChangeNameWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock x:Name="txtExistingIndustry" HorizontalAlignment="Left" Height="34" Margin="40,58,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Style="{StaticResource Label}"/>
+        <TextBox x:Name="txtNewIndustry" HorizontalAlignment="Left" Height="35" Margin="200,58,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Style="{StaticResource txtBox}" FontSize="14"/>
+        <Label  Content="Current Industry" HorizontalAlignment="Left" Height="27" Margin="40,26,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label  Content="New Industry" HorizontalAlignment="Left" Height="27" Margin="200,26,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button x:Name="btnCancel" Style="{StaticResource btn}" Content="Cancel" HorizontalAlignment="Left" Height="42" Margin="40,110,0,0" VerticalAlignment="Top" Width="130" Click="BtnCancel_Click"/>
+        <Button Style="{StaticResource btn}" Content="Send Request" HorizontalAlignment="Left" Height="42" Margin="200,110,0,0" VerticalAlignment="Top" Width="157" Click="ButtonSend_Click"/>
+
+    </Grid>
+</Window>
